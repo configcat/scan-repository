@@ -6,6 +6,6 @@ configcat scan "$GITHUB_WORKSPACE/$SCAN_SUB_DIR" \
     --line-count=${SCAN_LINE_COUNT} \
     --file-url-template="https://github.com/$GITHUB_REPOSITORY/blob/{branch}/{filePath}#L{lineNumber}" \
     --commit-url-template="https://github.com/$GITHUB_REPOSITORY/commit/{commitHash}" \
-    --runner="ConfigCat GitHub Action v1.0.0" \
+    --runner="ConfigCat GitHub Action v1" \
     --upload \
     $([ "$SCAN_VERBOSE" = "true" ] && printf -- '--verbose')

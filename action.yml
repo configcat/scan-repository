@@ -1,0 +1,39 @@
+name: 'ConfigCat Repository Scanner'
+description: 'Find code references to ConfigCat feature flags or settings in your source code.'
+author: 'ConfigCat'
+branding:
+  icon: toggle-right
+  color: red
+inputs:
+  api-host:
+    description: 'ConfigCat Management API host.'
+    default: 'api.configcat.com'
+  api-user:
+    description: 'ConfigCat Management API basic authentication username.'
+    required: true
+  api-pass:
+    description: 'ConfigCat Management API basic authentication password.'
+    required: true
+  config-id:
+    description: 'ID of the ConfigCat config to scan against.'
+    required: true
+  line-count:
+    description: 'Context line count before and after the reference line. (min: 1, max: 10)'
+    default: 5
+  sub-folder:
+    description: 'Sub-folder to scan, relative to the repository root folder.'
+    default: ''
+  verbose:
+    description: 'Turns on detailed logging.'
+    default: false
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  env:
+    CONFIGCAT_API_HOST: ${{ inputs.api-host }}
+    CONFIGCAT_API_USER: ${{ inputs.api-user }}
+    CONFIGCAT_API_PASS: ${{ inputs.api-pass }}
+    SCAN_CONFIG_ID: ${{ inputs.config-id }}
+    SCAN_SUB_DIR: ${{ inputs.sub-folder }}
+    SCAN_LINE_COUNT: ${{ inputs.line-count }}
+    SCAN_VERBOSE: ${{ inputs.verbose }}

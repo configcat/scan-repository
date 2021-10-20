@@ -15,6 +15,7 @@ This [GitHub Action](https://github.com/features/actions) is a utility that disc
 3. Create a new Actions workflow in your GitHub repository under the `.github/workflows` folder, and paste the following content into it.
     ```yaml
     on: [push]
+    name: Code references
     jobs:
       scan-repo:
         runs-on: ubuntu-latest

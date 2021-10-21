@@ -4,6 +4,8 @@ This [GitHub Action](https://github.com/features/actions) is a utility that disc
 ## Configuration
 1. Create a new [ConfigCat Management API credential](https://app.configcat.com/my-account/public-api-credentials) and store its values in [GitHub Secrets](https://docs.github.com/en/actions/security-guides/encrypted-secrets#creating-encrypted-secrets-for-a-repository) with the following names: `CONFIGCAT_API_USER`, `CONFIGCAT_API_PASS`.
 
+    ![secrets](https://raw.githubusercontent.com/configcat/scan-repository/main/assets/secrets.png  "secrets")
+
 2. Get the ID of your ConfigCat Config that you want to associate with your repository. The scanner will use this ID to determine which feature flags & settings to search in your source code.
     - Go to your [ConfigCat Dashboard](https://app.configcat.com), select the desired Config, and click the code references icon on one of your feature flags.
 
@@ -34,6 +36,10 @@ This [GitHub Action](https://github.com/features/actions) is a utility that disc
 4. Commit & push your action.
 
 The above example configures a workflow that executes the scan and code references upload on every git `push` event.
+
+The code references will be uploaded for each branch in your repository that triggers the workflow. 
+
+Every scan execution synchronizes with the active remote branches of your repository, and cleans up each stale report that belongs to a deleted branch.
 
 ## Available Options
 

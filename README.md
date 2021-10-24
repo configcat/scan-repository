@@ -6,7 +6,7 @@ This [GitHub Action](https://github.com/features/actions) is a utility that disc
 
     ![secrets](https://raw.githubusercontent.com/configcat/scan-repository/main/assets/secrets.png  "secrets")
 
-2. Get the ID of your ConfigCat Config that you want to associate with your repository. The scanner will use this ID to determine which feature flags & settings to search in your source code.
+2. Get the ID of your ConfigCat Config that you want to associate with your repository. The scanner will use this ID to determine which feature flags & settings to search for in your source code.
     - Go to your [ConfigCat Dashboard](https://app.configcat.com), select the desired Config, and click the code references icon on one of your feature flags.
 
       ![code-ref](https://raw.githubusercontent.com/configcat/scan-repository/main/assets/code_ref.png  "code-ref")

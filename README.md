@@ -1,6 +1,8 @@
 # ConfigCat Scan Repository Action
 This [GitHub Action](https://github.com/features/actions) is a utility that discovers ConfigCat feature flag & setting usages in your source code and uploads them to [ConfigCat](https://configcat.com).
 
+For more information about the code references, see our [documentation](https://configcat.com/docs/advanced/code-references/overview).
+
 ## Configuration
 1. Create a new [ConfigCat Management API credential](https://app.configcat.com/my-account/public-api-credentials) and store its values in [GitHub Secrets](https://docs.github.com/en/actions/security-guides/encrypted-secrets#creating-encrypted-secrets-for-a-repository) with the following names: `CONFIGCAT_API_USER`, `CONFIGCAT_API_PASS`.
 
@@ -36,10 +38,7 @@ This [GitHub Action](https://github.com/features/actions) is a utility that disc
 4. Commit & push your action.
 
 The above example configures a workflow that executes the scan and code references upload on every git `push` event.
-
 The code references will be uploaded for each branch in your repository that triggers the workflow. 
-
-Every scan execution synchronizes with the active remote branches of your repository, and cleans up each stale report that belongs to a deleted branch.
 
 ## Available Options
 

@@ -17,6 +17,7 @@ For more information about the code references, see our [documentation](https://
       ![config-id](https://raw.githubusercontent.com/configcat/scan-repository/main/assets/config_id.png  "config-id")
 
 3. Create a new Actions workflow in your GitHub repository under the `.github/workflows` folder, and paste the following content into it.
+Don't forget to replace the `PASTE-YOUR-CONFIG-ID-HERE` value with your actual Config ID.
     ```yaml
     on: [push]
     name: Code references

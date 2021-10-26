@@ -8,13 +8,7 @@ For more information about the code references, see our [documentation](https://
 
     ![secrets](https://raw.githubusercontent.com/configcat/scan-repository/main/assets/secrets.png  "secrets")
 
-2. Get the ID of your ConfigCat Config that you want to associate with your repository. The scanner will use this ID to determine which feature flags & settings to search for in your source code.
-    - Go to your [ConfigCat Dashboard](https://app.configcat.com), select the desired Config, and click the code references icon on one of your feature flags.
-
-      ![code-ref](https://raw.githubusercontent.com/configcat/scan-repository/main/assets/code_ref.png  "code-ref")
-    - Copy the Config ID from the highlighted box.
-
-      ![config-id](https://raw.githubusercontent.com/configcat/scan-repository/main/assets/config_id.png  "config-id")
+2. [Get the ID of your ConfigCat Config](https://configcat.com/docs/advanced/code-references/overview#config-id) that you want to associate with your repository. The scanner will use this ID to determine which feature flags & settings to search for in your source code.
 
 3. Create a new Actions workflow in your GitHub repository under the `.github/workflows` folder, and paste the following content into it.
 Don't forget to replace the `PASTE-YOUR-CONFIG-ID-HERE` value with your actual Config ID.

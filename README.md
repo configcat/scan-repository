@@ -1,7 +1,7 @@
 # ConfigCat Scan Repository Action
 This [GitHub Action](https://github.com/features/actions) is a utility that discovers ConfigCat feature flag & setting usages in your source code and uploads them to [ConfigCat](https://configcat.com).
 
-For more information about the code references, see our [documentation](https://configcat.com/docs/advanced/code-references/overview).
+For more information about repository scanning, see our [documentation](https://configcat.com/docs/advanced/code-references/overview).
 
 ## Configuration
 1. Create a new [ConfigCat Management API credential](https://app.configcat.com/my-account/public-api-credentials) and store its values in [GitHub Secrets](https://docs.github.com/en/actions/security-guides/encrypted-secrets#creating-encrypted-secrets-for-a-repository) with the following names: `CONFIGCAT_API_USER`, `CONFIGCAT_API_PASS`.
@@ -39,10 +39,10 @@ The code references will be uploaded for each branch in your repository that tri
 
 | Parameter     | Description                                                                | Required   | Default             |
 | ------------- | -------------------------------------------------------------------------- | ---------- | ------------------- |
-| `api-host`    | ConfigCat Management API host.                                             | yes        | `api.configcat.com` |
-| `api-user`    | ConfigCat Management API basic authentication username.                    | yes        |                     |
-| `api-pass`    | ConfigCat Management API basic authentication password.                    | yes        |                     |
-| `config-id`   | ID of the ConfigCat config to scan against.                                | yes        |                     |
-| `line-count`  | Context line count before and after the reference line. (min: 1, max: 10)  | no         | 5                   |
-| `sub-folder`  | Sub-folder to scan, relative to the repository root folder.                | no         |                     |
-| `verbose`     | Turns on detailed logging.                                                 | no         | false               |
+| `api-host`    | ConfigCat Management API host.                                             | &#9745;    | `api.configcat.com` |
+| `api-user`    | ConfigCat Management API basic authentication username.                    | &#9745;    |                     |
+| `api-pass`    | ConfigCat Management API basic authentication password.                    | &#9745;    |                     |
+| `config-id`   | ID of the ConfigCat config to scan against.                                | &#9745;    |                     |
+| `line-count`  | Context line count before and after the reference line. (min: 1, max: 10)  |            | 5                   |
+| `sub-folder`  | Sub-folder to scan, relative to the repository root folder.                |            |                     |
+| `verbose`     | Turns on detailed logging.                                                 |            | false               |

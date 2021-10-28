@@ -1,5 +1,5 @@
 # ConfigCat Scan Repository Action
-This [GitHub Action](https://github.com/features/actions) is a utility that discovers ConfigCat feature flag & setting usages in your source code and uploads them to [ConfigCat](https://configcat.com).
+This [GitHub Action](https://github.com/features/actions) is a utility that discovers ConfigCat feature flag and setting usages in your source code and uploads the found code references to [ConfigCat](https://configcat.com).
 
 For more information about repository scanning, see our [documentation](https://configcat.com/docs/advanced/code-references/overview).
 
@@ -33,7 +33,7 @@ Don't forget to replace the `PASTE-YOUR-CONFIG-ID-HERE` value with your actual C
 4. Commit & push your action.
 
 The above example configures a workflow that executes the scan and code references upload on every git `push` event.
-The code references will be uploaded for each branch in your repository that triggers the workflow. 
+Scan reports are uploaded for each branch of your repository that triggers the workflow. 
 
 ## Available Options
 

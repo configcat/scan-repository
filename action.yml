@@ -1,5 +1,5 @@
 name: 'ConfigCat Repository Scanner'
-description: 'Find code references to ConfigCat feature flags or settings in your source code.'
+description: 'Find code references to ConfigCat feature flags and settings in your source code.'
 author: 'ConfigCat'
 branding:
   icon: toggle-right

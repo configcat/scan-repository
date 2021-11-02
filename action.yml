@@ -1,4 +1,4 @@
-name: 'ConfigCat Repository Scanner'
+name: 'ConfigCat Scan Repository'
 description: 'Find code references to ConfigCat feature flags and settings in your source code.'
 author: 'ConfigCat'
 branding:

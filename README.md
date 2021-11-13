@@ -43,6 +43,6 @@ Scan reports are uploaded for each branch of your repository that triggers the w
 | `api-user`    | ConfigCat Management API basic authentication username.                    | &#9745;    |                     |
 | `api-pass`    | ConfigCat Management API basic authentication password.                    | &#9745;    |                     |
 | `config-id`   | ID of the ConfigCat config to scan against.                                | &#9745;    |                     |
-| `line-count`  | Context line count before and after the reference line. (min: 1, max: 10)  |            | 5                   |
+| `line-count`  | Context line count before and after the reference line. (min: 1, max: 10)  |            | 4                   |
 | `sub-folder`  | Sub-folder to scan, relative to the repository root folder.                |            |                     |
 | `verbose`     | Turns on detailed logging.                                                 |            | false               |

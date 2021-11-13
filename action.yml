@@ -19,7 +19,7 @@ inputs:
     required: true
   line-count:
     description: 'Context line count before and after the reference line. (min: 1, max: 10)'
-    default: 5
+    default: 4
   sub-folder:
     description: 'Sub-folder to scan, relative to the repository root folder.'
     default: ''

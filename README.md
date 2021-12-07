@@ -3,7 +3,7 @@ This [GitHub Action](https://github.com/features/actions) is a utility that disc
 
 For more information about repository scanning, see our [documentation](https://configcat.com/docs/advanced/code-references/overview).
 
-## Configuration
+## Setup
 1. Create a new [ConfigCat Management API credential](https://app.configcat.com/my-account/public-api-credentials) and store its values in [GitHub Secrets](https://docs.github.com/en/actions/security-guides/encrypted-secrets#creating-encrypted-secrets-for-a-repository) with the following names: `CONFIGCAT_API_USER`, `CONFIGCAT_API_PASS`.
 
     ![secrets](https://raw.githubusercontent.com/configcat/scan-repository/main/assets/secrets.png  "secrets")
@@ -40,8 +40,8 @@ Scan reports are uploaded for each branch of your repository that triggers the w
 | Parameter     | Description                                                                | Required   | Default             |
 | ------------- | -------------------------------------------------------------------------- | ---------- | ------------------- |
 | `api-host`    | ConfigCat Management API host.                                             | &#9745;    | `api.configcat.com` |
-| `api-user`    | ConfigCat Management API basic authentication username.                    | &#9745;    |                     |
-| `api-pass`    | ConfigCat Management API basic authentication password.                    | &#9745;    |                     |
+| `api-user`    | [ConfigCat Management API basic authentication username](https://app.configcat.com/my-account/public-api-credentials).                    | &#9745;    |                     |
+| `api-pass`    | [ConfigCat Management API basic authentication password](https://app.configcat.com/my-account/public-api-credentials).                    | &#9745;    |                     |
 | `config-id`   | ID of the ConfigCat config to scan against.                                | &#9745;    |                     |
 | `line-count`  | Context line count before and after the reference line. (min: 1, max: 10)  |            | 4                   |
 | `sub-folder`  | Sub-folder to scan, relative to the repository root folder.                |            |                     |

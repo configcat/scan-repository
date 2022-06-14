@@ -1,9 +1,7 @@
 # ConfigCat Scan Repository & Feature Flag Sync Action
-
+This [GitHub Action](https://github.com/features/actions) helps you get rid of technical debt by scanning the source code and highlighting the feature flag usages for each feature flag on the [ConfigCat Dashboard](https://app.configcat.com).
 
 For more information about repository scanning, see our [documentation](https://configcat.com/docs/advanced/code-references/overview).
-
-This [GitHub Action](https://github.com/features/actions) helps you get rid of technical debt by scanning the source code and highlighting the feature flag usages for each feature flag on the [ConfigCat Dashboard](https://app.configcat.com). 
 
 [ConfigCat](https://configcat.com) is a hosted service for feature flag and configuration management. It enables you to decouple feature releases from code deployments.
 

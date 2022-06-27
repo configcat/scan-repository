@@ -1,7 +1,9 @@
-# ConfigCat Scan Repository Action
-This [GitHub Action](https://github.com/features/actions) is a utility that discovers ConfigCat feature flag and setting usages in your source code and uploads the found code references to [ConfigCat](https://configcat.com).
+# ConfigCat Scan Repository & Feature Flag Sync Action
+This [GitHub Action](https://github.com/features/actions) helps you get rid of technical debt by scanning the source code and highlighting the feature flag usages for each feature flag on the [ConfigCat Dashboard](https://app.configcat.com).
 
 For more information about repository scanning, see our [documentation](https://configcat.com/docs/advanced/code-references/overview).
+
+[ConfigCat](https://configcat.com) is a hosted service for feature flag and configuration management. It enables you to decouple feature releases from code deployments.
 
 ## Setup
 1. Create a new [ConfigCat Management API credential](https://app.configcat.com/my-account/public-api-credentials) and store its values in [GitHub Secrets](https://docs.github.com/en/actions/security-guides/encrypted-secrets#creating-encrypted-secrets-for-a-repository) with the following names: `CONFIGCAT_API_USER`, `CONFIGCAT_API_PASS`.

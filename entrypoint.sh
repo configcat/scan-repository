@@ -1,5 +1,7 @@
 #!/bin/sh -l
 
+git config --global --add safe.directory "$PWD"
+
 configcat scan "$GITHUB_WORKSPACE/$SCAN_SUB_DIR" \
     --config-id=${SCAN_CONFIG_ID} \
     --repo=${GITHUB_REPOSITORY} \

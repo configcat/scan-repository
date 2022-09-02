@@ -25,7 +25,7 @@ inputs:
     default: ''
   exclude-keys:
     description: 'List of feature flag keys that must be excluded from the scan report.'
-    default: ' '
+    default: ''
   verbose:
     description: 'Turns on detailed logging.'
     default: false

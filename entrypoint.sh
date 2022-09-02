@@ -2,6 +2,9 @@
 
 git config --global --add safe.directory "$PWD"
 
+EXCLUDE_KEYS=' '
+[ -z "${SCAN_EXCLUDE_KEYS}" ] && EXCLUDE_KEYS=${SCAN_EXCLUDE_KEYS}
+
 configcat scan "$GITHUB_WORKSPACE/$SCAN_SUB_DIR" \
     --config-id=${SCAN_CONFIG_ID} \
     --repo=${GITHUB_REPOSITORY} \
@@ -12,4 +15,4 @@ configcat scan "$GITHUB_WORKSPACE/$SCAN_SUB_DIR" \
     --upload \
     --verbose=${SCAN_VERBOSE} \
     --non-interactive \
-    --exclude-flag-keys ${SCAN_EXCLUDE_KEYS}
+    --exclude-flag-keys ${EXCLUDE_KEYS}

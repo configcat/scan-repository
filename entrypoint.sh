@@ -11,5 +11,5 @@ configcat scan "$GITHUB_WORKSPACE/$SCAN_SUB_DIR" \
     --runner="ConfigCat GitHub Action v2.1.0" \
     --upload \
     --verbose=${SCAN_VERBOSE} \
-    --non-interactive
+    --non-interactive \
     --exclude-flag-keys ${SCAN_EXCLUDE_KEYS}

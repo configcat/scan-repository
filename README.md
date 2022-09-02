@@ -30,12 +30,12 @@ Don't forget to replace the `PASTE-YOUR-CONFIG-ID-HERE` value with your actual C
             api-user: ${{ secrets.CONFIGCAT_API_USER }}
             api-pass: ${{ secrets.CONFIGCAT_API_PASS }}
             config-id: PASTE-YOUR-CONFIG-ID-HERE
-            # line-count: 5             # Optional
-            # sub-folder: src           # Optional
-            # exclude-keys: >           # Optional
+            # line-count: 5             # optional
+            # sub-folder: src           # optional
+            # exclude-keys: >           # optional
             #   flag_key_to_exclue_1
             #   flag_key_to_exclue_2
-            # verbose: true             # Optional
+            # verbose: true             # optional
     ```
 
 4. Commit & push your action.

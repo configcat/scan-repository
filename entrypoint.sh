@@ -3,7 +3,7 @@
 git config --global --add safe.directory "$PWD"
 
 EXCLUDE_KEYS=' '
-[ -z "${SCAN_EXCLUDE_KEYS}" ] && EXCLUDE_KEYS=${SCAN_EXCLUDE_KEYS}
+[ ! -z "${SCAN_EXCLUDE_KEYS}" ] && EXCLUDE_KEYS=${SCAN_EXCLUDE_KEYS}
 
 echo "'$EXCLUDE_KEYS'"
 echo "'$SCAN_EXCLUDE_KEYS'"

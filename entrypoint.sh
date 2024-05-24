@@ -7,8 +7,8 @@ EXCLUDE_KEYS="' '"
 
 if [ ! -z "${SCAN_ALIAS_PATTERNS}" ] 
 then
-    IFS=$'\n'; split = ($SCAN_ALIAS_PATTERNS); unset IFS;
-    export CONFIGCAT_ALIAS_PATTERNS=$(IFS=, ; echo "${split[*]}")
+    IFS=$'\n' SPLIT=($SCAN_ALIAS_PATTERNS)
+    export CONFIGCAT_ALIAS_PATTERNS=$(IFS=, ; echo "${SPLIT[*]}")
 fi
 
 configcat scan "$GITHUB_WORKSPACE/$SCAN_SUB_DIR" \

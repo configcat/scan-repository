@@ -39,6 +39,8 @@ Don't forget to replace the `PASTE-YOUR-CONFIG-ID-HERE` value with your actual C
             #   (\w+) = :CC_KEY
             #   const (\w+) = feature_flags\.enabled\(:CC_KEY\)
             # verbose: true             # optional
+          # env:                        # optional
+          #   ALIAS_PATTERNS: (\w+) = :CC_KEY,const (\w+) = feature_flags\.enabled\(:CC_KEY\) # comma delimited alias patterns
     ```
 
 4. Commit & push your action.
@@ -59,3 +61,8 @@ Scan reports are uploaded for each branch of your repository that triggers the w
 | `exclude-keys`   | List of feature flag keys that must be excluded from the scan report.      |            |                     |
 | `alias-patterns` | List of custom regex patterns used to search for additional aliases.       |            |                     |
 | `verbose`        | Turns on detailed logging.                                                 |            | false               |
+
+### Environment variables:
+| Variable         | Description                                                                          |
+| ---------------- | ------------------------------------------------------------------------------------ |
+| `ALIAS_PATTERNS` | Comma delimited list of custom regex patterns used to search for additional aliases. |

@@ -61,7 +61,7 @@ Scan reports are uploaded for each branch of your repository that triggers the w
 | `exclude-keys`   | List of feature flag keys that must be excluded from the scan report.      |            |                     |
 | `verbose`        | Turns on detailed logging.                                                 |            | false               |
 
-### Environment variables:
+### Environment variables
 | Variable         | Description                                                                          |
 | ---------------- | ------------------------------------------------------------------------------------ |
 | `ALIAS_PATTERNS` | Comma delimited list of custom regex patterns used to search for additional aliases. |

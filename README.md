@@ -35,9 +35,9 @@ Don't forget to replace the `PASTE-YOUR-CONFIG-ID-HERE` value with your actual C
             # exclude-keys: >           # optional
             #   flag_key_to_exclue_1
             #   flag_key_to_exclue_2
-            # alias-patterns: >         # optional
+            # alias-patterns: |-        # optional
             #   (\w+) = :CC_KEY
-            #   const (\w+) = feature_flags\.enabled(:CC_KEY)
+            #   const (\w+) = feature_flags\.enabled\(:CC_KEY\)
             # verbose: true             # optional
     ```
 

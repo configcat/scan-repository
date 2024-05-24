@@ -59,7 +59,6 @@ Scan reports are uploaded for each branch of your repository that triggers the w
 | `line-count`     | Context line count before and after the reference line. (min: 1, max: 10)  |            | 4                   |
 | `sub-folder`     | Sub-folder to scan, relative to the repository root folder.                |            |                     |
 | `exclude-keys`   | List of feature flag keys that must be excluded from the scan report.      |            |                     |
-| `alias-patterns` | List of custom regex patterns used to search for additional aliases.       |            |                     |
 | `verbose`        | Turns on detailed logging.                                                 |            | false               |
 
 ### Environment variables:

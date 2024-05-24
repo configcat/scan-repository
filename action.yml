@@ -26,6 +26,9 @@ inputs:
   exclude-keys:
     description: 'List of feature flag keys that must be excluded from the scan report.'
     default: ''
+  alias-patterns:
+    description: 'Comma delimited list of custom regex patterns used to search for additional aliases.'
+    default: ''
   verbose:
     description: 'Turns on detailed logging.'
     default: false
@@ -40,5 +43,5 @@ runs:
     SCAN_SUB_DIR: ${{ inputs.sub-folder }}
     SCAN_LINE_COUNT: ${{ inputs.line-count }}
     SCAN_EXCLUDE_KEYS: ${{ inputs.exclude-keys }}
+    CONFIGCAT_ALIAS_PATTERNS: ${{ inputs.alias-patterns }}
     SCAN_VERBOSE: ${{ inputs.verbose }}
-    CONFIGCAT_ALIAS_PATTERNS: ${{ env.ALIAS_PATTERNS }}

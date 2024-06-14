@@ -35,7 +35,8 @@ Don't forget to replace the `PASTE-YOUR-CONFIG-ID-HERE` value with your actual C
             # exclude-keys: >           # optional
             #   flag_key_to_exclue_1
             #   flag_key_to_exclue_2
-            # alias-patterns: (\w+) = :CC_KEY,const (\w+) = feature_flags\.enabled\(:CC_KEY\) #comma delimited alias patterns
+            # alias-patterns: (\w+) = :CC_KEY,const (\w+) = feature_flags\.enabled\(:CC_KEY\) # optional, comma delimited alias patterns
+            # usage-patterns: feature_flags\.enabled\(:CC_KEY\)   # optional, comma delimited flag key usage patterns
             # verbose: true             # optional
     ```
 
@@ -56,4 +57,5 @@ Scan reports are uploaded for each branch of your repository that triggers the w
 | `sub-folder`     | Sub-folder to scan, relative to the repository root folder.                |            |                     |
 | `exclude-keys`   | List of feature flag keys that must be excluded from the scan report.      |            |                     |
 | `alias-patterns` | Comma delimited list of custom regex patterns used to search for additional aliases. |  |                     |
+| `usage-patterns` | Comma delimited list of custom regex patterns that describe additional feature flag key usages. |  |                     |
 | `verbose`        | Turns on detailed logging.                                                 |            | false               |

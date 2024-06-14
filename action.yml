@@ -29,6 +29,9 @@ inputs:
   alias-patterns:
     description: 'Comma delimited list of custom regex patterns used to search for additional aliases.'
     default: ''
+  usage-patterns:
+    description: 'Comma delimited list of custom regex patterns that describe additional feature flag key usages.'
+    default: ''
   verbose:
     description: 'Turns on detailed logging.'
     default: false
@@ -44,4 +47,5 @@ runs:
     SCAN_LINE_COUNT: ${{ inputs.line-count }}
     SCAN_EXCLUDE_KEYS: ${{ inputs.exclude-keys }}
     CONFIGCAT_ALIAS_PATTERNS: ${{ inputs.alias-patterns }}
+    CONFIGCAT_USAGE_PATTERNS: ${{ inputs.usage-patterns }}
     SCAN_VERBOSE: ${{ inputs.verbose }}

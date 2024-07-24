@@ -23,7 +23,7 @@ Don't forget to replace the `PASTE-YOUR-CONFIG-ID-HERE` value with your actual C
         name: Scan repository for code references
         steps:
         - name: Checkout
-          uses: actions/checkout@v3
+          uses: actions/checkout@v4
         - name: Scan & upload
           uses: configcat/scan-repository@v2
           with:

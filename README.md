@@ -31,7 +31,7 @@ Don't forget to replace the `PASTE-YOUR-CONFIG-ID-HERE` value with your actual C
             api-pass: ${{ secrets.CONFIGCAT_API_PASS }}
             config-id: PASTE-YOUR-CONFIG-ID-HERE
             # line-count: 5             # optional
-            # timeout: 1800             # optional
+            # timeout: 2000             # optional
             # sub-folder: src           # optional
             # exclude-keys: >           # optional
             #   flag_key_to_exclue_1

@@ -31,6 +31,7 @@ Don't forget to replace the `PASTE-YOUR-CONFIG-ID-HERE` value with your actual C
             api-pass: ${{ secrets.CONFIGCAT_API_PASS }}
             config-id: PASTE-YOUR-CONFIG-ID-HERE
             # line-count: 5             # optional
+            # timeout: 2000             # optional
             # sub-folder: src           # optional
             # exclude-keys: >           # optional
             #   flag_key_to_exclue_1
@@ -54,6 +55,7 @@ Scan reports are uploaded for each branch of your repository that triggers the w
 | `api-pass`       | [ConfigCat Management API basic authentication password](https://app.configcat.com/my-account/public-api-credentials). | &#9745;    |        |
 | `config-id`      | ID of the ConfigCat config to scan against.                                | &#9745;    |                     |
 | `line-count`     | Context line count before and after the reference line. (min: 1, max: 10)  |            | 4                   |
+| `timeout`        | Scan timeout in seconds (default: 1800, min: 60)                           |            | 1800                |
 | `sub-folder`     | Sub-folder to scan, relative to the repository root folder.                |            |                     |
 | `exclude-keys`   | List of feature flag keys that must be excluded from the scan report.      |            |                     |
 | `alias-patterns` | Comma delimited list of custom regex patterns used to search for additional aliases. |  |                     |

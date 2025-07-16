@@ -20,6 +20,9 @@ inputs:
   line-count:
     description: 'Context line count before and after the reference line. (min: 1, max: 10)'
     default: 4
+  timeout:
+    description: 'Scan timeout in seconds (default: 1800, min: 60)'
+    default: 1800
   sub-folder:
     description: 'Sub-folder to scan, relative to the repository root folder.'
     default: ''
@@ -45,6 +48,7 @@ runs:
     SCAN_CONFIG_ID: ${{ inputs.config-id }}
     SCAN_SUB_DIR: ${{ inputs.sub-folder }}
     SCAN_LINE_COUNT: ${{ inputs.line-count }}
+    SCAN_TIMEOUT: ${{ inputs.timeout }}
     SCAN_EXCLUDE_KEYS: ${{ inputs.exclude-keys }}
     CONFIGCAT_ALIAS_PATTERNS: ${{ inputs.alias-patterns }}
     CONFIGCAT_USAGE_PATTERNS: ${{ inputs.usage-patterns }}

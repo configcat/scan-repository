@@ -18,7 +18,7 @@ inputs:
     description: 'ID of the ConfigCat config to scan against.'
     required: true
   repository:
-    description: 'Name of the repository. Defaults to the current GitHub repository. (owner/repo)'
+    description: 'Name of the repository. Defaults to the current GitHub repository. (owner/repository)'
     default: ''
   line-count:
     description: 'Context line count before and after the reference line. (min: 1, max: 10)'

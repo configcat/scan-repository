@@ -4,10 +4,11 @@ git config --global --add safe.directory "$PWD"
 
 EXCLUDE_KEYS="' '"
 [ ! -z "${SCAN_EXCLUDE_KEYS}" ] && EXCLUDE_KEYS=${SCAN_EXCLUDE_KEYS}
+REPOSITORY=${SCAN_REPOSITORY:-${GITHUB_REPOSITORY}}
 
 configcat scan "$GITHUB_WORKSPACE/$SCAN_SUB_DIR" \
     --config-id=${SCAN_CONFIG_ID} \
-    --repo=${GITHUB_REPOSITORY} \
+    --repo=${REPOSITORY} \
     --line-count=${SCAN_LINE_COUNT} \
     --timeout=${SCAN_TIMEOUT} \
     --file-url-template="https://github.com/$GITHUB_REPOSITORY/blob/{commitHash}/{filePath}#L{lineNumber}" \

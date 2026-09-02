@@ -30,10 +30,11 @@ Don't forget to replace the `PASTE-YOUR-CONFIG-ID-HERE` value with your actual C
             api-user: ${{ secrets.CONFIGCAT_API_USER }}
             api-pass: ${{ secrets.CONFIGCAT_API_PASS }}
             config-id: PASTE-YOUR-CONFIG-ID-HERE
-            # line-count: 5             # optional
-            # timeout: 2000             # optional
-            # sub-folder: src           # optional
-            # exclude-keys: >           # optional
+            # repository: owner/repository     # optional, defaults to the current GitHub repository
+            # line-count: 5                    # optional
+            # timeout: 2000                    # optional
+            # sub-folder: src                  # optional
+            # exclude-keys: >                  # optional
             #   flag_key_to_exclue_1
             #   flag_key_to_exclue_2
             # alias-patterns: (\w+) = :CC_KEY,const (\w+) = feature_flags\.enabled\(:CC_KEY\) # optional, comma delimited alias patterns
@@ -54,6 +55,7 @@ Scan reports are uploaded for each branch of your repository that triggers the w
 | `api-user`       | [ConfigCat Management API basic authentication username](https://app.configcat.com/my-account/public-api-credentials). | &#9745;    |        |
 | `api-pass`       | [ConfigCat Management API basic authentication password](https://app.configcat.com/my-account/public-api-credentials). | &#9745;    |        |
 | `config-id`      | ID of the ConfigCat config to scan against.                                | &#9745;    |                     |
+| `repository`     | Name of the repository.                                                    |            | Current GitHub repository (owner/name) |
 | `line-count`     | Context line count before and after the reference line. (min: 1, max: 10)  |            | 4                   |
 | `timeout`        | Scan timeout in seconds (default: 1800, min: 60)                           |            | 1800                |
 | `sub-folder`     | Sub-folder to scan, relative to the repository root folder.                |            |                     |

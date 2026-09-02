@@ -17,6 +17,9 @@ inputs:
   config-id:
     description: 'ID of the ConfigCat config to scan against.'
     required: true
+  repository:
+    description: 'Name of the repository. Defaults to the current GitHub repository. (owner/repo)'
+    default: ''
   line-count:
     description: 'Context line count before and after the reference line. (min: 1, max: 10)'
     default: 4
@@ -46,6 +49,7 @@ runs:
     CONFIGCAT_API_USER: ${{ inputs.api-user }}
     CONFIGCAT_API_PASS: ${{ inputs.api-pass }}
     SCAN_CONFIG_ID: ${{ inputs.config-id }}
+    SCAN_REPOSITORY: ${{ inputs.repository }}
     SCAN_SUB_DIR: ${{ inputs.sub-folder }}
     SCAN_LINE_COUNT: ${{ inputs.line-count }}
     SCAN_TIMEOUT: ${{ inputs.timeout }}

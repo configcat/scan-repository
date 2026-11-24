@@ -13,8 +13,9 @@ configcat scan "$GITHUB_WORKSPACE/$SCAN_SUB_DIR" \
     --timeout=${SCAN_TIMEOUT} \
     --file-url-template="https://github.com/$GITHUB_REPOSITORY/blob/{commitHash}/{filePath}#L{lineNumber}" \
     --commit-url-template="https://github.com/$GITHUB_REPOSITORY/commit/{commitHash}" \
-    --runner="ConfigCat GitHub Action v2.7.1" \
+    --runner="ConfigCat GitHub Action v2.8.0" \
     --upload \
     --verbose=${SCAN_VERBOSE} \
+    --fail-on-deleted-flag-found=${SCAN_FAIL_ON_DELETED_FLAG_FOUND} \
     --non-interactive \
     --exclude-flag-keys ${EXCLUDE_KEYS}

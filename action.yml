@@ -38,6 +38,9 @@ inputs:
   usage-patterns:
     description: 'Comma delimited list of custom regex patterns that describe additional feature flag key usages.'
     default: ''
+  fail-on-deleted-flag-found:
+    description: 'Fail the scan if a deleted feature flag is found.'
+    default: false
   verbose:
     description: 'Turns on detailed logging.'
     default: false
@@ -56,4 +59,5 @@ runs:
     SCAN_EXCLUDE_KEYS: ${{ inputs.exclude-keys }}
     CONFIGCAT_ALIAS_PATTERNS: ${{ inputs.alias-patterns }}
     CONFIGCAT_USAGE_PATTERNS: ${{ inputs.usage-patterns }}
+    SCAN_FAIL_ON_DELETED_FLAG_FOUND: ${{ inputs.fail-on-deleted-flag-found }}
     SCAN_VERBOSE: ${{ inputs.verbose }}
